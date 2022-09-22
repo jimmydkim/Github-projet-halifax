@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Book your Trip</title>
+    <link rel="stylesheet" href="indext.css">
+</head>
+<body>
+   <div class="formu">
+    <H1>BOOK A TRIP</H1> 
+    <br />
+    <br />
+    <form method="get" action="formulaire.php" >
+    
+        
+            <label for="nom">Enter your Name here :</label>
+            <input type="text" name="nom" id="nom" />
+            <br />
+            <label for="prenom">Enter your First Name here :</label>
+            <input type="text" name="prenom" id="prenom" />
+            <br />
+            <label for="Mail"> Enter your Email  here :</label>
+            <input type="text" name="Mail" id="Mail add" placeholder="Ex Jimmy18@gmail.com" />
+            <br />
+            <label for="Mail"> Enter the people number  here :</label>
+            <input type="number" />
+            <br />
+           
+            <label for="location">Location :</label>
+            <select name="pseudo" id="pseudo" > 
+           <option value="Halifax">Halifax</option>
+           <option value="Sydney">Sydney</option>
+           <option value="Montreal">Montreal</option>
+           <option value="Others">Others</option>
+           </select>
+           <br />
+           <label for="Date">Trip Date :</label>
+           <input type="date">
+           <form method="post" action="traitement.php">
+            <br />
+
+            <label for="ameliorer"> How we can do better ?</label>
+                <textarea name="ameliorer" id="ameliorer" rows="10" cols="50">
+                Your Opinion is Precious for us!
+                </textarea>  
+                <br />     
+                <input type="submit" value="submit"  id="button"/>
+         </form>
+     </form>
+   </div>
+   <script src="jquery-3.6.1.js"></script>
+<script>
+      
+</script>
+</body>
+</html>
