@@ -1,58 +1,146 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=, initial-scale=1.0">
-    <title>Book your Trip</title>
-    <link rel="stylesheet" href="indext.css">
-</head>
-<body>
-   <div class="formu">
-    <H1>BOOK A TRIP</H1> 
-    <br />
-    <br />
-    <form method="get" action="formulaire.php" >
-    
-        
-            <label for="nom">Enter your Name here :</label>
-            <input type="text" name="nom" id="nom" />
-            <br />
-            <label for="prenom">Enter your First Name here :</label>
-            <input type="text" name="prenom" id="prenom" />
-            <br />
-            <label for="Mail"> Enter your Email  here :</label>
-            <input type="text" name="Mail" id="Mail add" placeholder="Ex Jimmy18@gmail.com" />
-            <br />
-            <label for="Mail"> Enter the people number  here :</label>
-            <input type="number" />
-            <br />
-           
-            <label for="location">Location :</label>
-            <select name="pseudo" id="pseudo" > 
-           <option value="Halifax">Halifax</option>
-           <option value="Sydney">Sydney</option>
-           <option value="Montreal">Montreal</option>
-           <option value="Others">Others</option>
-           </select>
-           <br />
-           <label for="Date">Trip Date :</label>
-           <input type="date">
-           <form method="post" action="traitement.php">
-            <br />
 
-            <label for="ameliorer"> How we can do better ?</label>
-                <textarea name="ameliorer" id="ameliorer" rows="10" cols="50">
-                Your Opinion is Precious for us!
-                </textarea>  
-                <br />     
-                <input type="submit" value="submit"  id="button"/>
-         </form>
-     </form>
-   </div>
-   <script src="jquery-3.6.1.js"></script>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=, initial-scale=1.0">
+  <title>Book your Trip</title>
+  <link rel="stylesheet" href="indext.css">
+</head>
+
+<body>
+
+  <header>
+
+    <nav>
+
+      <h1 class="titre1">Halifax Canoe and Kayak</h1>
+      <div class="icone">
+        <div class="hambur"><img src="/hamburger2.png" alt=""></div>
+        <div id="paddle"><img src="/paddle-white2.png" alt=""></div>
+      </div>
+
+      <ul class="navMenu">
+        <div class="close"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+            stroke="currentColor" class="w-6 h-6">
+            <path stroke-linecap="round" stroke-linejoin="round"
+              d="M12 9.75L14.25 12m0 0l2.25 2.25M14.25 12l2.25-2.25M14.25 12L12 14.25m-2.58 4.92l-6.375-6.375a1.125 1.125 0 010-1.59L9.42 4.83c.211-.211.498-.33.796-.33H19.5a2.25 2.25 0 012.25 2.25v10.5a2.25 2.25 0 01-2.25 2.25h-9.284c-.298 0-.585-.119-.796-.33z" />
+          </svg>
+        </div>
+        <li class="menu-home"><a href="index.html">Home</a>
+          <ul class="sous-menu">
+            <li><a href="#">Welcome</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">About</a></li>
+          </ul>
+        </li>
+        <li class="menu-book"><a href="Formulaire.html">Book Trip</a>
+          <ul class="sous-menu">
+            <li><a href="halifax.html">Halifax</a></li>
+            <li><a href="Sydney.html">Sydney</a></li>
+            <li><a href="montreal.html">Montreal</a></li>
+            <li><a href="others.html">Others</a></li>
+          </ul>
+        </li>
+        <li class="Login"><a href="Admin-add.php">Admin Login</a>
+          <ul class="sous-menu">
+            <li><a href="Admin-add.php">Login</a></li>
+          </ul>
+
+        </li>
+      </ul>
+    </nav>
+
+  </header>
+
+  <div class="formu">
+    <H1>BOOK A TRIP</H1>
+    <br />
+    <br />
+    <form method="get" action="thank-you.php">
+
+
+      <label for="Firstname">
+        First-name <br />
+      </label>
+      <input type="text" name="Firstname" id="Firstname"> <br />
+
+      <label for="Lastname">
+        Last-name <br />
+      </label>
+      <input type="text" name="Lastname" id="Lastname"> <br />
+
+      <label for="email">
+        Email <br />
+      </label>
+      <input type="text" name="email" id="email"> <br />
+
+      <label for="phone">
+        Telephone <br />
+      </label>
+      <input type="tel" name="phone" id="phone"> <br />
+
+
+      <label for="location">
+        Location <br />
+      </label>
+      <select name="pseudo" id="pseudo">
+
+        <option value="Halifax">Halifax</option>
+        <option value="Sydney">Sydney</option>
+        <option value="Montreal">Montreal</option>
+        <option value="Others">Others</option>
+      </select> <br />
+
+      <label for="date">
+        Trip Date <br />
+      </label>
+      <input type="date" name="date"> <br />
+
+      <label for="message">
+        Add more details <br />
+      </label>
+      <textarea name="message" id="message" rows="10" cols="50">
+                  Your Opinion is Precious for us!
+        </textarea> <br />
+
+      <input type="submit" value="submit" id="button" />
+
+  </div>
+
+
+  <script src="jquery-3.6.1.js"> </script>
+  <script>
+    $(document).ready(function () {
+      $(".hambur").click(function () {
+        $(".navMenu").toggle();
+      });
+      $('.close').click(function () {
+        $(".navMenu").hide();
+      });
+    });
+
+  </script>
+
 <script>
-      
+
+  let name ;
+  name= (prompt("What is your name ? "));
+  name=(" Hello," + name + " you must to have legal age to reserve a trip " );
+  alert(name);
+ 
+
+let age= Number(prompt("How old are you ? "));
+
+if(age<19){
+  alert("You are underage");
+}
+else{
+  alert("You are old enought to book a trip");
+ }
+   
 </script>
 </body>
+
 </html>
