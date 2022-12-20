@@ -177,26 +177,12 @@ nav>ul>li:hover a {
 
 /* Page formulaire*/
 
-.formu {
-
-    font-size: 18px;
-    max-width: 500px;
-    border: 2px solid red;
-    margin: 2px auto;
-    background-color: rgb(127, 146, 255);
-    padding-top: 70px;
-
-    display: block;
-
-}
-
-
-
-
-
-
-
-
+  .formu {
+    font-size: 25px;
+  }   
+    
+        
+    
 @media(max-width:780px) {
 
 
